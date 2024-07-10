@@ -9,5 +9,5 @@ COPY squid.conf /etc/squid/squid.conf
 # Expose the Squid port
 EXPOSE 3128
 
-# Start Squid and tail logs
-CMD ["sh", "-c", "squid -N -d1 & tail -f /var/log/squid/access.log"]
+# Start Squid
+CMD ["squid", "-N"]
